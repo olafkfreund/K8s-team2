@@ -1,11 +1,11 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  namespace: "media"
-  name: "komga-ingress"
+  namespace: "team2"
+  name: "frontend"
 spec:
   rules:
-  - host: "frontend.192.168.68.211.nip.io"
+  - host: "frontend.192.168.68.212.nip.io"
     http:
       paths:
         - backend:
