@@ -5,23 +5,6 @@ metadata:
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.podinfod: semver:~1.7
-  name: frontend
-  namespace: team2
-spec:
-  template:
-    spec:
-      $setElementOrder/containers:
-      - name: podinfod
-      containers:
-      - image: stefanprodan/podinfo:podinfo-arm64
-        name: podinfod
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  annotations:
-    flux.weave.works/automated: "true"
-    flux.weave.works/tag.podinfod: semver:~1.7
   name: backend
   namespace: team2
 spec:
@@ -30,5 +13,22 @@ spec:
       $setElementOrder/containers:
       - name: podinfod
       containers:
-      - image: stefanprodan/podinfo:podinfo-arm64
+      - image: stefanprodan/podinfo:1.7.1
+        name: podinfod
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.podinfod: semver:~1.7
+  name: frontend
+  namespace: team2
+spec:
+  template:
+    spec:
+      $setElementOrder/containers:
+      - name: podinfod
+      containers:
+      - image: stefanprodan/podinfo:1.7.1
         name: podinfod
