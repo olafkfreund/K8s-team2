@@ -1,4 +1,4 @@
-namespace: team1
+namespace: team2
 bases:
   - ./workloads/frontend/
   - ./workloads/backend/
