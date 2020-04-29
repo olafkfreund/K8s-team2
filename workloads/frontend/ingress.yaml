@@ -5,10 +5,10 @@ metadata:
   name: "frontend"
 spec:
   rules:
-  - host: "team2.192.168.68.211.nip.io"
+  - host: team2.192.168.68.211.nip.io
     http:
       paths:
         - backend:
-            serviceName: "frontend"
+            serviceName: frontend
             servicePort: 80
-          path: "/"
+          path: /
