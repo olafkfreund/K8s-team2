@@ -1,11 +1,11 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  namespace: "team1"
+  namespace: "team2"
   name: "podinfo-ingress"
 spec:
   rules:
-  - host: team1.192.168.68.211.nip.io
+  - host: team2.192.168.68.211.nip.io
     http:
       paths:
         - backend:
