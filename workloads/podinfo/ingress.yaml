@@ -2,13 +2,12 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   namespace: "team2"
-  name: "podinfo-ingress"
+  name: "podinfo"
 spec:
   rules:
-  - host: team2.192.168.68.211.nip.io
+  - host: team2.192.168.68.212.nip.io
     http:
       paths:
         - backend:
             serviceName: podinfo
-            servicePort: 9898
-          path: /
+            servicePort: 80
