@@ -1,3 +1,5 @@
 namespace: team2
 bases:
   - ./workloads/podinfo/
+  - ./workloads/frontend/
+  - ./workloads/backend/
