@@ -12,7 +12,7 @@ metadata:
       proxy_hide_header l5d-server-id;
 spec:
   rules:
-  - host: vote-team2.192.168.68.212.nip.io
+  - host: team2-voto.home.freundcloud.org.uk
     http:
       paths:
       - backend:
